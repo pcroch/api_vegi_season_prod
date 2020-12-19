@@ -16,3 +16,7 @@ product4 = Product.create(name: 'Tomatoes', kind: 'vegetable', months_available:
 product5 = Product.create(name: 'Brocoli', kind: 'vegetable', months_available: 'August', user: admin )
 product6 = Product.create(name: 'Brocoli', kind: 'vegetable', months_available: 'September', user: admin )
 
+=beginAdding the user key token=end
+=beginadmin = User.find_by(email: "admin@admin.admin")
+admin.save
+admin.reload.authentication_token=end

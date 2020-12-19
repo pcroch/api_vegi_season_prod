@@ -335,3 +335,367 @@ Processing by Api::V1::ProductsController#show as JSON
 Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 7354)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1912386204085733565)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddTokenToUsers (20201219181615)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" character varying(30)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201219181615"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1912386204085733565)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "fMs5Wy3fzKyZWAmiS5Si"]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "authentication_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2020-12-19 18:20:06.466219"], ["authentication_token", "fMs5Wy3fzKyZWAmiS5Si"], ["id", 1]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started PATCH "/api/v1/products/2" for ::1 at 2020-12-19 18:22:02 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 1707)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1912386204085733565)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1912386204085733565)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started PATCH "/api/v1/products/2" for ::1 at 2020-12-19 18:33:25 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms | Allocations: 1185)
+
+
+Started PATCH "/api/v1/products/2" for ::1 at 2020-12-19 18:33:26 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 231)
+
+
+Started PATCH "/api/v1/products/2" for ::1 at 2020-12-19 18:39:14 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"New name"}, "id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+Completed 404 Not Found in 34ms (Views: 0.2ms | ActiveRecord: 5.6ms | Allocations: 10667)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:39:19 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"New name"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+Completed 401 Unauthorized in 9ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 7832)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:39:38 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"New name"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2747)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:40:04 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"New name"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2748)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:40:12 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"products"=>{"name"=>"New name"}, "id"=>"1", "product"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+Completed 401 Unauthorized in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2734)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:40:42 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"New name"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+Completed 401 Unauthorized in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2729)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:43:46 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"New name"}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/policies/product_policy.rb:13:in `update?'
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:14:in `update'
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["name", "New name"], ["updated_at", "2020-12-19 18:43:46.209604"], ["id", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:14:in `update'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:14:in `update'
+  Rendering api/v1/products/show.json.jbuilder
+  Rendered api/v1/products/show.json.jbuilder (Duration: 0.3ms | Allocations: 245)
+Completed 200 OK in 23ms (Views: 1.4ms | ActiveRecord: 4.7ms | Allocations: 22312)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2020-12-19 18:43:55 +0000
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Ananas"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:24:in `set_product'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/policies/product_policy.rb:13:in `update?'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:14:in `update'
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["name", "Ananas"], ["updated_at", "2020-12-19 18:43:55.149409"], ["id", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:14:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:14:in `update'
+  Rendering api/v1/products/show.json.jbuilder
+  Rendered api/v1/products/show.json.jbuilder (Duration: 0.1ms | Allocations: 62)
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 1.9ms | Allocations: 5795)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1912386204085733565)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1912386204085733565)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:02:39 +0000
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "kind", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pine Apple"], ["kind", "fruits"], ["user_id", 1], ["created_at", "2020-12-19 19:02:39.107057"], ["updated_at", "2020-12-19 19:02:39.107057"]]
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  Rendering api/v1/products/show.json.jbuilder
+  Rendered api/v1/products/show.json.jbuilder (Duration: 0.1ms | Allocations: 64)
+Completed 201 Created in 28ms (Views: 0.5ms | ActiveRecord: 2.0ms | Allocations: 17444)
+
+
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:02:45 +0000
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "kind", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pine Apple"], ["kind", "fruits"], ["user_id", 1], ["created_at", "2020-12-19 19:02:45.593668"], ["updated_at", "2020-12-19 19:02:45.593668"]]
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  Rendering api/v1/products/show.json.jbuilder
+  Rendered api/v1/products/show.json.jbuilder (Duration: 0.1ms | Allocations: 61)
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 4433)
+
+
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:03:38 +0000
+  
+NoMethodError (undefined method `valides' for #<Class:0x0000564106f5aaf8>
+Did you mean?  validates):
+  
+app/models/product.rb:4:in `<class:Product>'
+app/models/product.rb:1:in `<main>'
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:03:55 +0000
+  
+NoMethodError (undefined method `valides' for #<Class:0x00007fb76816bc38>
+Did you mean?  validates):
+  
+app/models/product.rb:4:in `<class:Product>'
+app/models/product.rb:1:in `<main>'
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:04:01 +0000
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "kind", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pine Apple"], ["kind", "fruits"], ["user_id", 1], ["created_at", "2020-12-19 19:04:01.054120"], ["updated_at", "2020-12-19 19:04:01.054120"]]
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  Rendering api/v1/products/show.json.jbuilder
+  Rendered api/v1/products/show.json.jbuilder (Duration: 0.1ms | Allocations: 63)
+Completed 201 Created in 27ms (Views: 0.7ms | ActiveRecord: 5.8ms | Allocations: 17776)
+
+
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:04:10 +0000
+  
+NoMethodError (undefined method `valides' for #<Class:0x00007fb75c1eeef0>
+Did you mean?  validates):
+  
+app/models/product.rb:4:in `<class:Product>'
+app/models/product.rb:1:in `<main>'
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:04:29 +0000
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.6ms | Allocations: 17887)
+
+
+  
+NoMethodError (undefined method `names' for #<Product:0x00007fb75c1c7170>
+Did you mean?  name
+               name=
+               name?):
+  
+app/controllers/api/v1/products_controller.rb:25:in `create'
+Started POST "/api/v1/products/" for ::1 at 2020-12-19 19:04:48 +0000
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Pine Apple"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/products_controller.rb:25:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 0.1ms | ActiveRecord: 5.3ms | Allocations: 18703)
+
+
+Started DELETE "/api/v1/products/5" for ::1 at 2020-12-19 19:08:18 +0000
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}, "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:41:in `set_product'
+Completed 404 Not Found in 24ms (Views: 0.1ms | ActiveRecord: 7.7ms | Allocations: 10601)
+
+
+Started DELETE "/api/v1/products/2" for ::1 at 2020-12-19 19:08:22 +0000
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"product"=>{"name"=>"Pine Apple", "kind"=>"fruits"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:41:in `set_product'
+Completed 401 Unauthorized in 13ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 7651)
+
+
+Started DELETE "/api/v1/products/2" for ::1 at 2020-12-19 19:08:40 +0000
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:41:in `set_product'
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2723)
+
+
+Started DELETE "/api/v1/products/1" for ::1 at 2020-12-19 19:09:16 +0000
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:41:in `set_product'
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2724)
+
+
+Started DELETE "/api/v1/products/1" for ::1 at 2020-12-19 19:10:18 +0000
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:41:in `set_product'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/policies/product_policy.rb:22:in `destroy?'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:33:in `destroy'
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:33:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:33:in `destroy'
+Completed 204 No Content in 20ms (ActiveRecord: 6.5ms | Allocations: 19180)
+
+
+Started DELETE "/api/v1/products/" for ::1 at 2020-12-19 19:10:22 +0000
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/products"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/api/v1/products/" for ::1 at 2020-12-19 19:10:28 +0000
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/products"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/products/" for ::1 at 2020-12-19 19:10:40 +0000
+Processing by Api::V1::ProductsController#index as JSON
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/index.json.jbuilder (Duration: 1.3ms | Allocations: 969)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1689)
+
+
