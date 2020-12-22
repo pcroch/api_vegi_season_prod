@@ -5,31 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Puts "Admin"
+p "Admin"
 User.create(email: 'admin@admin.admin', password: '123123')
-Puts "Fruits"
-Puts "Spring March"
+p "Fruits"
+p "Spring March"
 Product.create(name: 'Lemon', kind: 'fruit', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Kiwi', kind: 'fruit', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Orange', kind: 'fruit', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Peer', kind: 'fruit', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Apple', kind: 'fruit', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 
-Puts "Spring March"
+p "Spring March"
 Product.create(name: 'Lemon', kind: 'fruit', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Kiwi', kind: 'fruit', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Orange', kind: 'fruit', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Peer', kind: 'fruit', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Apple', kind: 'fruit', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 
-Puts "Spring May"
+p "Spring May"
 Product.create(name: 'Strawberry', kind: 'fruit', months_available: 'Mai', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Watermelon', kind: 'fruit', months_available: 'Mai', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Peer', kind: 'fruit', months_available: 'Mai', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Apple', kind: 'fruit', months_available: 'Mai', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Rhubarb', kind: 'fruit', months_available: 'Mai', seasons_available: 'Spring', user_id: 1)
 
-Puts "Summer June"
+p "Summer June"
 Product.create(name: 'Apricot', kind: 'fruit', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Strawberry', kind: 'fruit', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Melon', kind: 'fruit', months_available: 'June', seasons_available: 'Summer', user_id: 1)
@@ -38,7 +38,7 @@ Product.create(name: 'Nectarine', kind: 'fruit', months_available: 'June', seaso
 Product.create(name: 'Watermelon', kind: 'fruit', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Peach', kind: 'fruit', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 
-Puts "Summer July"
+p "Summer July"
 Product.create(name: 'Apricot', kind: 'fruit', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Cherry', kind: 'fruit', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Strawberry', kind: 'fruit', months_available: 'July', seasons_available: 'Summer', user_id: 1)
@@ -52,7 +52,7 @@ Product.create(name: 'Nectarine', kind: 'fruit', months_available: 'July', seaso
 Product.create(name: 'Watermelon', kind: 'fruit', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Peach', kind: 'fruit', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 
-Puts "Summer August"
+p "Summer August"
 Product.create(name: 'Strawberry', kind: 'fruit', months_available: 'August', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Raspberry', kind: 'fruit', months_available: 'August', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Currants', kind: 'fruit', months_available: 'August', seasons_available: 'Summer', user_id: 1)
@@ -68,7 +68,7 @@ Product.create(name: 'Grape', kind: 'fruit', months_available: 'August', seasons
 
 
 
-Puts "Autumn September"
+p "Autumn September"
 Product.create(name: 'Strawberry', kind: 'fruit', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Raspberry', kind: 'fruit', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Melon', kind: 'fruit', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
@@ -79,7 +79,7 @@ Product.create(name: 'Apple', kind: 'fruit', months_available: 'September', seas
 Product.create(name: 'Plum', kind: 'fruit', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Grape', kind: 'fruit', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 
-Puts "Autumn October"
+p "Autumn October"
 Product.create(name: 'Clementine', kind: 'fruit', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Mandarin', kind: 'fruit', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Peer', kind: 'fruit', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
@@ -87,7 +87,7 @@ Product.create(name: 'Apple', kind: 'fruit', months_available: 'October', season
 Product.create(name: 'Plum', kind: 'fruit', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Grape', kind: 'fruit', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 
-Puts "Autumn November"
+p "Autumn November"
 Product.create(name: 'Lemon', kind: 'fruit', months_available: 'November', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Clementine', kind: 'fruit', months_available: 'November', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Mandarin', kind: 'fruit', months_available: 'November', seasons_available: 'Autumn', user_id: 1)
@@ -97,7 +97,7 @@ Product.create(name: 'Apple', kind: 'fruit', months_available: 'November', seaso
 
 
 
-Puts "Winter December"
+p "Winter December"
 Product.create(name: 'Lemon', kind: 'fruit', months_available: 'December', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Clementine', kind: 'fruit', months_available: 'December', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Kiwi', kind: 'fruit', months_available: 'December', seasons_available: 'Winter', user_id: 1)
@@ -105,7 +105,7 @@ Product.create(name: 'Orange', kind: 'fruit', months_available: 'December', seas
 Product.create(name: 'Peer', kind: 'fruit', months_available: 'December', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Apple', kind: 'fruit', months_available: 'December', seasons_available: 'Winter', user_id: 1)
 
-Puts "Winter Januari"
+p "Winter Januari"
 Product.create(name: 'Lemon', kind: 'fruit', months_available: 'Januari', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Clementine', kind: 'fruit', months_available: 'Januari', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Kiwi', kind: 'fruit', months_available: 'Januari', seasons_available: 'Winter', user_id: 1)
@@ -113,7 +113,7 @@ Product.create(name: 'Orange', kind: 'fruit', months_available: 'Januari', seaso
 Product.create(name: 'Peer', kind: 'fruit', months_available: 'Januari', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Apple', kind: 'fruit', months_available: 'Januari', seasons_available: 'Winter', user_id: 1)
 
-Puts "Winter Februari"
+p "Winter Februari"
 Product.create(name: 'Lemon', kind: 'fruit', months_available: 'Februari', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Clementine', kind: 'fruit', months_available: 'Februari', seasons_available: 'Winter', user_id: 1)
 Product.create(name: 'Kiwi', kind: 'fruit', months_available: 'Februari', seasons_available: 'Winter', user_id: 1)
@@ -122,8 +122,8 @@ Product.create(name: 'Peer', kind: 'fruit', months_available: 'Februari', season
 Product.create(name: 'Apple', kind: 'fruit', months_available: 'Februari', seasons_available: 'Winter', user_id: 1)
 
 
-Puts "Vegetables"
-Puts "Spring March"
+p "Vegetables"
+p "Spring March"
 Product.create(name: 'Beetroot', kind: 'vegetable', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Carrot', kind: 'vegetable', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Celeriac', kind: 'vegetable', months_available: 'March', seasons_available: 'Spring', user_id: 1)
@@ -138,7 +138,7 @@ Product.create(name: 'Leek', kind: 'vegetable', months_available: 'March', seaso
 Product.create(name: 'Salsify', kind: 'vegetable', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Jerusalem Artichoke', kind: 'vegetable', months_available: 'March', seasons_available: 'Spring', user_id: 1)
 
-Puts "Spring April"
+p "Spring April"
 Product.create(name: 'Asparagus', kind: 'vegetable', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Celeriac', kind: 'vegetable', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Cucumber', kind: 'vegetable', months_available: 'April', seasons_available: 'Spring', user_id: 1)
@@ -146,7 +146,7 @@ Product.create(name: 'Leek', kind: 'vegetable', months_available: 'April', seaso
 Product.create(name: 'Radish', kind: 'vegetable', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Tomato', kind: 'vegetable', months_available: 'April', seasons_available: 'Spring', user_id: 1)
 
-Puts "Spring May"
+p "Spring May"
 Product.create(name: 'Asparagus', kind: 'vegetable', months_available: 'May', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Celery', kind: 'vegetable', months_available: 'May', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Kohlrabi', kind: 'vegetable', months_available: 'May', seasons_available: 'Spring', user_id: 1)
@@ -157,7 +157,7 @@ Product.create(name: 'Leek', kind: 'vegetable', months_available: 'May', seasons
 Product.create(name: 'Radish', kind: 'vegetable', months_available: 'May', seasons_available: 'Spring', user_id: 1)
 Product.create(name: 'Tomato', kind: 'vegetable', months_available: 'May', seasons_available: 'Spring', user_id: 1)
 
-Puts "Summer June"
+p "Summer June"
 Product.create(name: 'Artichoke', kind: 'vegetable', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Asparagus', kind: 'vegetable', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Carrot With Tops', kind: 'vegetable', months_available: 'June', seasons_available: 'Summer', user_id: 1)
@@ -172,7 +172,7 @@ Product.create(name: 'Head Lettuce', kind: 'vegetable', months_available: 'June'
 Product.create(name: 'Radish', kind: 'vegetable', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Tomato', kind: 'vegetable', months_available: 'June', seasons_available: 'Summer', user_id: 1)
 
-Puts "Summer July"
+p "Summer July"
 Product.create(name: 'Artichoke', kind: 'vegetable', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Eggplant', kind: 'vegetable', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Broccoli', kind: 'vegetable', months_available: 'July', seasons_available: 'Summer', user_id: 1)
@@ -196,7 +196,7 @@ Product.create(name: 'Pepper', kind: 'vegetable', months_available: 'July', seas
 Product.create(name: 'Radish', kind: 'vegetable', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Tomato', kind: 'vegetable', months_available: 'July', seasons_available: 'Summer', user_id: 1)
 
-Puts "Summer August"
+p "Summer August"
 Product.create(name: 'Artichoke', kind: 'vegetable', months_available: 'August', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Eggplant', kind: 'vegetable', months_available: 'August', seasons_available: 'Summer', user_id: 1)
 Product.create(name: 'Broccoli', kind: 'vegetable', months_available: 'August', seasons_available: 'Summer', user_id: 1)
@@ -221,7 +221,7 @@ Product.create(name: 'Pepper', kind: 'vegetable', months_available: 'August', se
 Product.create(name: 'Tomato', kind: 'vegetable', months_available: 'August', seasons_available: 'Summer', user_id: 1)
 
 
-Puts "Autumn September"
+p "Autumn September"
 Product.create(name: 'Eggplant', kind: 'vegetable', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Broccoli', kind: 'vegetable', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Carrot With Tops', kind: 'vegetable', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
@@ -246,7 +246,7 @@ Product.create(name: 'Pepper', kind: 'vegetable', months_available: 'September',
 Product.create(name: 'Tomato', kind: 'vegetable', months_available: 'September', seasons_available: 'Autumn', user_id: 1)
 
 
-Puts "Autumn October"
+p "Autumn October"
 Product.create(name: 'Artichoke', kind: 'vegetable', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Beetroot', kind: 'vegetable', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Broccoli', kind: 'vegetable', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
@@ -272,7 +272,7 @@ Product.create(name: 'Leek', kind: 'vegetable', months_available: 'October', sea
 Product.create(name: 'Pumpkin', kind: 'vegetable', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Jerusalem artichoke', kind: 'vegetable', months_available: 'October', seasons_available: 'Autumn', user_id: 1)
 
-Puts "Autumn November"
+p "Autumn November"
 Product.create(name: 'Beetroot', kind: 'vegetable', months_available: 'November', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Broccoli', kind: 'vegetable', months_available: 'November', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Carrot', kind: 'vegetable', months_available: 'November', seasons_available: 'Autumn', user_id: 1)
@@ -295,7 +295,7 @@ Product.create(name: 'Jerusalem artichoke', kind: 'vegetable', months_available:
 
 
 
-Puts "Winter December"
+p "Winter December"
 Product.create(name: 'Beetroot', kind: 'vegetable', months_available: 'December', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Carrot', kind: 'vegetable', months_available: 'December', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Celeriac', kind: 'vegetable', months_available: 'December', seasons_available: 'Autumn', user_id: 1)
@@ -314,7 +314,7 @@ Product.create(name: 'Black Radish', kind: 'vegetable', months_available: 'Decem
 Product.create(name: 'Salsify', kind: 'vegetable', months_available: 'December', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Jerusalem artichoke', kind: 'vegetable', months_available: 'December', seasons_available: 'Autumn', user_id: 1)
 
-Puts "Winter Januari"
+p "Winter Januari"
 Product.create(name: 'Beetroot', kind: 'vegetable', months_available: 'Januari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Celeriac', kind: 'vegetable', months_available: 'Januari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Chicon', kind: 'vegetable', months_available: 'Januari', seasons_available: 'Autumn', user_id: 1)
@@ -331,7 +331,7 @@ Product.create(name: 'Black Radish', kind: 'vegetable', months_available: 'Janua
 Product.create(name: 'Salsify', kind: 'vegetable', months_available: 'Januari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Jerusalem artichoke', kind: 'vegetable', months_available: 'Januari', seasons_available: 'Autumn', user_id: 1)
 
-Puts "Winter Februari"
+p "Winter Februari"
 Product.create(name: 'Beetroot', kind: 'vegetable', months_available: 'Februari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Celeriac', kind: 'vegetable', months_available: 'Februari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Chicon', kind: 'vegetable', months_available: 'Februari', seasons_available: 'Autumn', user_id: 1)
@@ -347,3 +347,5 @@ Product.create(name: 'Leek', kind: 'vegetable', months_available: 'Februari', se
 Product.create(name: 'Black Radish', kind: 'vegetable', months_available: 'Februari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Salsify', kind: 'vegetable', months_available: 'Februari', seasons_available: 'Autumn', user_id: 1)
 Product.create(name: 'Jerusalem artichoke', kind: 'vegetable', months_available: 'Februari', seasons_available: 'Autumn', user_id: 1)
+
+p "All done!!!"
