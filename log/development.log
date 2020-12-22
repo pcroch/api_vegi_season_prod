@@ -4118,3 +4118,964 @@ Processing by Api::V2::ProductsController#show as JSON
 Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1889)
 
 
+Started GET "/api/v2/products/1" for ::1 at 2020-12-22 16:08:58 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V2::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v2/products_controller.rb:41:in `set_product'
+  Rendering api/v2/products/show.json.jbuilder
+  Rendered api/v2/products/show.json.jbuilder (Duration: 0.3ms | Allocations: 248)
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 2.2ms | Allocations: 10135)
+
+
+Started GET "/api/v2/products/1" for ::1 at 2020-12-22 16:08:59 +0000
+Processing by Api::V2::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v2/products_controller.rb:41:in `set_product'
+  Rendering api/v2/products/show.json.jbuilder
+  Rendered api/v2/products/show.json.jbuilder (Duration: 0.1ms | Allocations: 64)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1173)
+
+
+Started GET "/api/v2/products/85" for ::1 at 2020-12-22 16:09:04 +0000
+Processing by Api::V2::ProductsController#show as JSON
+  Parameters: {"id"=>"85"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  ↳ app/controllers/api/v2/products_controller.rb:41:in `set_product'
+  Rendering api/v2/products/show.json.jbuilder
+  Rendered api/v2/products/show.json.jbuilder (Duration: 0.1ms | Allocations: 64)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1190)
+
+
+Started GET "/api/v2/products/April" for ::1 at 2020-12-22 16:17:53 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V2::ProductsController#show as JSON
+  Parameters: {"id"=>"April"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v2/products_controller.rb:41:in `set_product'
+Completed 404 Not Found in 13ms (Views: 1.0ms | ActiveRecord: 3.5ms | Allocations: 3365)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:18:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v2/months/April"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/" for ::1 at 2020-12-22 16:18:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v2/months"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/1" for ::1 at 2020-12-22 16:18:30 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v2/months/1"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/1" for ::1 at 2020-12-22 16:18:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v2/months/1"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/5" for ::1 at 2020-12-22 16:18:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v2/months/5"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:20:51 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms | Allocations: 58605)
+
+
+  
+NoMethodError (undefined method `set_months' for #<Api::V2::MonthsController:0x0000560832fc97d0>):
+  
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:21:01 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms | Allocations: 58826)
+
+
+  
+NoMethodError (undefined method `set_months' for #<Api::V2::MonthsController:0x0000560833370ac8>):
+  
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:21:52 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1 LIMIT $2[0m  [["months_available", "April"], ["LIMIT", 11]]
+  Rendered api/v2/months/show.json.jbuilder (Duration: 18.9ms | Allocations: 10491)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.5ms | Allocations: 13992)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Product::ActiveRecord_Relation:0x00005594a87885d8>
+Did you mean?  ids):
+    1: json.extract! @month, :id, :name, :kind
+  
+app/views/api/v2/months/show.json.jbuilder:1
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:23:22 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1 LIMIT $2[0m  [["months_available", "April"], ["LIMIT", 11]]
+  Rendered api/v2/months/show.json.jbuilder (Duration: 3.9ms | Allocations: 4606)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 5467)
+
+
+  
+ActionView::Template::Error (undefined method `kind' for #<Product::ActiveRecord_Relation:0x00005594a838a940>):
+    1: json.extract! @month, :name, :kind
+  
+app/views/api/v2/months/show.json.jbuilder:1
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:23:37 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  Rendered api/v2/months/show.json.jbuilder (Duration: 0.4ms | Allocations: 111)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1001)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:25:27 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1 LIMIT $2[0m  [["months_available", "April"], ["LIMIT", 11]]
+  Rendered api/v2/months/show.json.jbuilder (Duration: 8.7ms | Allocations: 9365)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.8ms | Allocations: 11660)
+
+
+  
+ActionView::Template::Error (undefined method `kind' for #<Product::ActiveRecord_Relation:0x00005594a81479a8>):
+    1: json.extract! @month, :name, :kind
+  
+app/views/api/v2/months/show.json.jbuilder:1
+Started PUT "/__web_console/repl_sessions/3323e343e389d41ca065128fca445d49" for ::1 at 2020-12-22 16:25:40 +0000
+Started PUT "/__web_console/repl_sessions/3323e343e389d41ca065128fca445d49" for ::1 at 2020-12-22 16:25:41 +0000
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1 LIMIT $2[0m  [["months_available", "April"], ["LIMIT", 11]]
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:26:35 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/controllers/api/v2/months_controller.rb:7:in `show'
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 3.2ms | Allocations: 9235)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:34:46 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1 LIMIT $2[0m  [["months_available", "April"], ["LIMIT", 11]]
+  Rendered api/v2/months/show.json.jbuilder (Duration: 10.9ms | Allocations: 9307)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms | Allocations: 11411)
+
+
+  
+ActionView::Template::Error (undefined method `kind' for #<Product::ActiveRecord_Relation:0x00007f7d34a34978>):
+    1: json.extract! @month, :name, :kind
+  
+app/views/api/v2/months/show.json.jbuilder:1
+Started PUT "/__web_console/repl_sessions/f3caef0a6b7f9eb254bb901eb5ab0682" for ::1 at 2020-12-22 16:34:50 +0000
+Started PUT "/__web_console/repl_sessions/f3caef0a6b7f9eb254bb901eb5ab0682" for ::1 at 2020-12-22 16:34:50 +0000
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1 LIMIT $2[0m  [["months_available", "April"], ["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/f3caef0a6b7f9eb254bb901eb5ab0682" for ::1 at 2020-12-22 16:42:06 +0000
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:1
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:44:09 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:3
+  Rendered api/v2/months/show.json.jbuilder (Duration: 7.2ms | Allocations: 5732)
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 5.3ms | Allocations: 8111)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:44:49 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  Rendered api/v2/months/show.json.jbuilder (Duration: 0.5ms | Allocations: 1008)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1862)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+@month.eqach |item|  do
+json.extract! @month[item], :name, :kind
+
+
+
+end
+
+):
+1:    
+2:    @month.eqach |item|  do
+3:    json.extract! @month[item], :name, :kind
+4:    
+5:    
+6:    
+7:    end
+  
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:45:02 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  Rendered api/v2/months/show.json.jbuilder (Duration: 0.6ms | Allocations: 1005)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1859)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+@month.each |item|  do
+json.extract! @month[item], :name, :kind
+
+
+
+end
+
+):
+1:    
+2:    @month.each |item|  do
+3:    json.extract! @month[item], :name, :kind
+4:    
+5:    
+6:    
+7:    end
+  
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:2: syntax error, unexpected do
+app/views/api/v2/months/show.json.jbuilder:10: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:45:19 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:2
+  Rendered api/v2/months/show.json.jbuilder (Duration: 2.0ms | Allocations: 1891)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2744)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Product into Integer):
+    1: 
+    2: @month.each do |item|
+    3: json.extract! @month[item], :name, :kind
+    4: 
+    5: 
+    6: 
+  
+app/views/api/v2/months/show.json.jbuilder:3
+app/views/api/v2/months/show.json.jbuilder:2
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:45:33 +0000
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:45:34 +0000
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:45:37 +0000
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:45:45 +0000
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:45:52 +0000
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:47:09 +0000
+Started PUT "/__web_console/repl_sessions/20c9068e0f315b0f7272be2648e46aa8" for ::1 at 2020-12-22 16:47:12 +0000
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:47:42 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  Rendered api/v2/months/show.json.jbuilder (Duration: 0.8ms | Allocations: 1008)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1863)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+
+i =1
+While i <= @month.length
+json.extract! @month[i], :name, :kind
+i += 1
+
+end
+
+):
+1:    
+2:    
+3:    i =1
+4:    While i <= @month.length
+5:    json.extract! @month[i], :name, :kind
+6:    i += 1
+7:    
+8:    end
+  
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end, expecting end-of-input
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:47:58 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 254.3ms | Allocations: 180461)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.4ms | Allocations: 181316)
+
+
+  
+ActionView::Template::Error (undefined method `While' for #<#<Class:0x00007f7d34822d60>:0x00007f7d34820e48>):
+    1: 
+    2: 
+    3: i =1
+    4: While i <= @month.length do
+    5: json.extract! @month[i], :name, :kind
+    6: i += 1
+    7: 
+  
+app/views/api/v2/months/show.json.jbuilder:4
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:07 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.6ms | Allocations: 904)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1780)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:15 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.9ms | Allocations: 904)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1765)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:15 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.4ms | Allocations: 835)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1401)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:15 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.3ms | Allocations: 835)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1408)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:16 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.0ms | Allocations: 835)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1406)
+
+
+Started GET "/api/v2/months/May" for ::1 at 2020-12-22 16:49:19 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"May"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "May"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.2ms | Allocations: 808)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1381)
+
+
+Started GET "/api/v2/months/May" for ::1 at 2020-12-22 16:49:31 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"May"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "May"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.8ms | Allocations: 877)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1736)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:38 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.4ms | Allocations: 835)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1401)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:46 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 2.4ms | Allocations: 904)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1783)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:47 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.3ms | Allocations: 835)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1407)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:47 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.4ms | Allocations: 835)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1398)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:48 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.2ms | Allocations: 835)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1402)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:50 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.6ms | Allocations: 835)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1392)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:49:57 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.7ms | Allocations: 1073)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1938)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:50:09 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.9ms | Allocations: 1020)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1877)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:50:17 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1.8ms | Allocations: 1020)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1897)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:50:26 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:50:30 +0000
+Started GET "/api/v2/months/May" for ::1 at 2020-12-22 16:50:33 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (300.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"May"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (700.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "May"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:50:45 +0000
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 16:50:53 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (600.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (1500.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:09:50 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  Rendered api/v2/months/show.json.jbuilder (Duration: 0.6ms | Allocations: 207)
+Completed 200 OK in 20ms (Views: 3.4ms | ActiveRecord: 2.2ms | Allocations: 3626)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:10:04 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:10:17 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (400.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:4
+  Rendered api/v2/months/show.json.jbuilder (Duration: 12311.6ms | Allocations: 21481906)
+Completed 500 Internal Server Error in 12910ms (ActiveRecord: 700.0ms | Allocations: 22525488)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: 
+    3: i =1
+    4: while i <= @month.length
+    5:  json.extract! @month[i], :name, :kind
+    6:   i += 1
+    7: end
+  
+app/views/api/v2/months/show.json.jbuilder:5
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:14:52 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (399.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:6
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1106.8ms | Allocations: 1899199)
+Completed 500 Internal Server Error in 1601ms (ActiveRecord: 399.7ms | Allocations: 2733044)
+
+
+  
+ActionView::Template::Error (undefined method `address' for #<Product:0x00007f29602b71a0>):
+    4: 
+    5: 
+    6: json.array! @month do |m|
+    7:   json.extract! m, :name, :address
+    8: end
+  
+app/views/api/v2/months/show.json.jbuilder:7
+app/views/api/v2/months/show.json.jbuilder:6
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:15:09 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (400.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:6
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1601.8ms | Allocations: 2744424)
+Completed 200 OK in 2202ms (Views: 1301.4ms | ActiveRecord: 699.9ms | Allocations: 3775414)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:15:34 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (400.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:6
+  Rendered api/v2/months/show.json.jbuilder (Duration: 1201.5ms | Allocations: 2046999)
+Completed 200 OK in 1901ms (Views: 1301.1ms | ActiveRecord: 400.0ms | Allocations: 3255873)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:16:15 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  Rendered api/v2/months/show.json.jbuilder (Duration: 300.7ms | Allocations: 516820)
+Completed 500 Internal Server Error in 901ms (ActiveRecord: 0.0ms | Allocations: 1542081)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+
+
+
+
+json.array! @month do |m|
+  json.extract! m, :name, :kind, :months_available,
+end
+
+):
+1:    
+2:    
+3:    
+4:    
+5:    
+6:    json.array! @month do |m|
+7:      json.extract! m, :name, :kind, :months_available,
+8:    end
+  
+app/views/api/v2/months/show.json.jbuilder:8: syntax error, unexpected end
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end-of-input, expecting end
+app/views/api/v2/months/show.json.jbuilder:8: syntax error, unexpected end
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end-of-input, expecting end
+app/views/api/v2/months/show.json.jbuilder:8: syntax error, unexpected end
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end-of-input, expecting end
+app/views/api/v2/months/show.json.jbuilder:8: syntax error, unexpected end
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end-of-input, expecting end
+app/views/api/v2/months/show.json.jbuilder:8: syntax error, unexpected end
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end-of-input, expecting end
+app/views/api/v2/months/show.json.jbuilder:8: syntax error, unexpected end
+app/views/api/v2/months/show.json.jbuilder:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:17:59 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (199.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:6
+  Rendered api/v2/months/show.json.jbuilder (Duration: 901.3ms | Allocations: 1515662)
+Completed 200 OK in 1500ms (Views: 1100.8ms | ActiveRecord: 199.8ms | Allocations: 2526505)
+
+
+Started GET "/api/v2/months/April" for ::1 at 2020-12-22 17:19:15 +0000
+Processing by Api::V2::MonthsController#show as JSON
+  Parameters: {"id"=>"April"}
+  Rendering api/v2/months/show.json.jbuilder
+  [1m[36mProduct Load (299.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."months_available" = $1[0m  [["months_available", "April"]]
+  ↳ app/views/api/v2/months/show.json.jbuilder:6
+  Rendered api/v2/months/show.json.jbuilder (Duration: 2101.5ms | Allocations: 3562931)
+Completed 200 OK in 2702ms (Views: 2201.8ms | ActiveRecord: 299.6ms | Allocations: 4571499)
+
+
