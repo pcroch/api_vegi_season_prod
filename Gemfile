@@ -67,3 +67,6 @@ gem 'pundit'
 
 # Gemfile
 gem 'simple_token_authentication'
+
+# cors security
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'
