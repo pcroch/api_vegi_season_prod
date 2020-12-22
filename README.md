@@ -32,7 +32,7 @@ __For a normal user:__
   
   
   **1** - Issues: Show item per months instead of per :id
-    - Solution: 
+    - Solution: V2 of the api.
     
   **2** - Issues: Write down the doc for the admin
     - Solution: I just have to do it :)
