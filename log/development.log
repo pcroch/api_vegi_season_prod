@@ -4088,3 +4088,33 @@ Processing by Api::V1::ProductsController#index as JSON
 Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.5ms | Allocations: 19464)
 
 
+Started GET "/" for ::1 at 2020-12-22 16:02:58 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 503)
+  Rendered shared/_flashes.html.erb (Duration: 1.1ms | Allocations: 190)
+Completed 200 OK in 96ms (Views: 89.2ms | ActiveRecord: 0.0ms | Allocations: 41765)
+
+
+Started GET "/api/v2/products" for ::1 at 2020-12-22 16:03:04 +0000
+Processing by Api::V2::ProductsController#index as JSON
+  Rendering api/v2/products/index.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/v2/products/index.json.jbuilder:2
+  Rendered api/v2/products/index.json.jbuilder (Duration: 35.9ms | Allocations: 24866)
+Completed 200 OK in 44ms (Views: 33.1ms | ActiveRecord: 4.1ms | Allocations: 26971)
+
+
+Started GET "/api/v2/products/1" for ::1 at 2020-12-22 16:03:12 +0000
+Processing by Api::V2::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v2/products_controller.rb:41:in `set_product'
+  Rendering api/v2/products/show.json.jbuilder
+  Rendered api/v2/products/show.json.jbuilder (Duration: 0.3ms | Allocations: 130)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1889)
+
+
