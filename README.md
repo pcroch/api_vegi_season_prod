@@ -5,20 +5,24 @@ Actually no one can modify the db as I locked the modification via an Admin... I
 
 __For a normal user:__
 
-
+### For the products
 1- Print all the items in the API - **all users**
 
-  https://api-season-prod.herokuapp.com/api/v1/products
+  Old: https://api-season-prod.herokuapp.com/api/v1/products 
+  
+  Current version: https://api-season-prod.herokuapp.com/api/v2/products
 
 2- Show the item as per its id - **all users**
 
   :id is an integer
 
-  https://api-season-prod.herokuapp.com/api/v1/products/:id
+  Old: https://api-season-prod.herokuapp.com/api/v1/products/:id 
+  
+  Current version: https://api-season-prod.herokuapp.com/api/v2/products/:id
   
  3- Create an item - **admin only**
  
- **Upcoming** 
+  **Upcoming** 
  
  4 - Update an item - **admin only**
   
@@ -26,14 +30,25 @@ __For a normal user:__
   
  5- Destroy an item - **admin only**
  
- **Upcoming** 
+  **Upcoming** 
+ 
+ ### To sort per months the results
+1- Show the item as per its id - **all users**
+
+  :id is an month of the year without the quote
+  
+   https://api-season-prod.herokuapp.com/api/v2/products/:id
+  
+  e.g. https://api-season-prod.herokuapp.com/api/v2/products/April
+  
   
   __Upcoming functionalities:__
   
   
-  **1** - Issues: Show item per months instead of per :id
-    - Solution: V2 of the api.
-    
+  **1** - Issues: Show item per months instead done
+  
+   **1.b** - Issues: Show item per product instead of per :id 
+     
   **2** - Issues: Write down the doc for the admin
     - Solution: I just have to do it :)
   
