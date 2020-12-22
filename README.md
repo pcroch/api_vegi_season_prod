@@ -16,15 +16,15 @@ __For a normal user:__
 
   https://api-season-prod.herokuapp.com/api/v1/products/:id
   
- 3- Create an item - **admin only
+ 3- Create an item - **admin only**
  
  **Upcoming** 
  
- 4 - Update an item - **admin only
+ 4 - Update an item - **admin only**
   
   **Upcoming** 
   
- 5- Destroy an item - **admin only
+ 5- Destroy an item - **admin only**
  
  **Upcoming** 
   
