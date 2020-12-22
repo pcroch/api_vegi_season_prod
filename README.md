@@ -29,6 +29,8 @@ __For a normal user:__
  **Upcoming** 
   
   __Upcoming functionalities:__
+  
+  
   **1** - Issues: Show item per months instead of per :id
     - Solution: 
     
