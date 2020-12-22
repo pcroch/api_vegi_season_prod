@@ -5150,3 +5150,980 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 11369)
 
 
+Started GET "/api/v1/products" for ::1 at 2020-12-22 17:54:23 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ProductsController#index as JSON
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/index.json.jbuilder (Duration: 33.7ms | Allocations: 24972)
+Completed 200 OK in 40ms (Views: 31.4ms | ActiveRecord: 3.3ms | Allocations: 27740)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:54:29 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 1510)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms | Allocations: 41660)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+ <%= # image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= #link_to "Action", "#", class: "dropdown-item" %>
+            <%= #link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+):
+1:    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+2:    
+3:    
+4:      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:        <span class="navbar-toggler-icon"></span>
+6:      </button>
+7:    
+8:    
+9:      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+10:        <ul class="navbar-nav mr-auto">
+11:          <% if user_signed_in? %>
+12:            <li class="nav-item active">
+13:              <%= link_to "Home", "#", class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item">
+16:              <%= link_to "Messages", "#", class: "nav-link" %>
+17:            </li>
+18:            <li class="nav-item dropdown">
+19:     <%= # image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+20:              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+21:                <%= #link_to "Action", "#", class: "dropdown-item" %>
+22:                <%= #link_to "Another action", "#", class: "dropdown-item" %>
+23:                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+24:              </div>
+25:            </li>
+26:          <% else %>
+27:            <li class="nav-item">
+28:              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+29:            </li>
+30:          <% end %>
+31:        </ul>
+32:      </div>
+33:    </div>
+  
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2020-12-22 17:54:50 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 1208)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 13608)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+ <%=  image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= #link_to "Action", "#", class: "dropdown-item" %>
+            <%= #link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+):
+1:    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+2:    
+3:    
+4:      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:        <span class="navbar-toggler-icon"></span>
+6:      </button>
+7:    
+8:    
+9:      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+10:        <ul class="navbar-nav mr-auto">
+11:          <% if user_signed_in? %>
+12:            <li class="nav-item active">
+13:              <%= link_to "Home", "#", class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item">
+16:              <%= link_to "Messages", "#", class: "nav-link" %>
+17:            </li>
+18:            <li class="nav-item dropdown">
+19:     <%=  image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+20:              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+21:                <%= #link_to "Action", "#", class: "dropdown-item" %>
+22:                <%= #link_to "Another action", "#", class: "dropdown-item" %>
+23:                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+24:              </div>
+25:            </li>
+26:          <% else %>
+27:            <li class="nav-item">
+28:              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+29:            </li>
+30:          <% end %>
+31:        </ul>
+32:      </div>
+33:    </div>
+  
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/shared/_navbar.html.erb:24: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:25: unknown regexp option - l
+app/views/shared/_navbar.html.erb:27: syntax error, unexpected class, expecting do or '{' or '('
+app/views/shared/_navbar.html.erb:29: syntax error, unexpected '<', expecting ')'
+app/views/shared/_navbar.html.erb:31: unknown regexp option - l
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:33: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:36: unterminated string meets end of file
+app/views/shared/_navbar.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2020-12-22 17:55:02 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 473)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 189)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 13306)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:55:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 394)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 182)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 13209)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:55:18 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 11365)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:55:18 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 11351)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:55:18 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 11342)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 367)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 13186)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-22 17:56:18 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 612)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.7ms | Allocations: 18239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 23)
+Completed 200 OK in 46ms (Views: 34.6ms | ActiveRecord: 2.6ms | Allocations: 37227)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-12-22 17:56:30 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"K2V/vSHbvXEetnKRTYNHnDoqVM2aXE9Idnzu0EXue02VzPafMs88JUZTv93wWab/G3IQWBw/u0yowmX+GdjLUw==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 1.5ms | Allocations: 5104)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:31 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 1071)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 12333)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1056)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 12286)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:44 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 1280)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 182)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms | Allocations: 14092)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:47 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1055)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 12296)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:48 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 1039)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 12281)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 1035)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 12273)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:56:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1035)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 12265)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:57:09 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 1385)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 182)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 14200)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:57:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 1175)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 13592)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+ <%=   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+):
+1:    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+2:    
+3:    
+4:      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:        <span class="navbar-toggler-icon"></span>
+6:      </button>
+7:    
+8:    
+9:      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+10:        <ul class="navbar-nav mr-auto">
+11:          <% if user_signed_in? %>
+12:            <li class="nav-item active">
+13:              <%= link_to "Home", "#", class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item">
+16:              <%= link_to "Messages", "#", class: "nav-link" %>
+17:            </li>
+18:            <li class="nav-item dropdown">
+19:     <%=   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+20:              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+21:    
+22:                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+23:              </div>
+24:            </li>
+25:          <% else %>
+26:            <li class="nav-item">
+27:              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+28:            </li>
+29:          <% end %>
+30:        </ul>
+31:      </div>
+32:    </div>
+  
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2020-12-22 17:57:21 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 1162)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 12298)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+ <%=   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+):
+1:    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+2:    
+3:    
+4:      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:        <span class="navbar-toggler-icon"></span>
+6:      </button>
+7:    
+8:    
+9:      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+10:        <ul class="navbar-nav mr-auto">
+11:          <% if user_signed_in? %>
+12:            <li class="nav-item active">
+13:              <%= link_to "Home", "#", class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item">
+16:              <%= link_to "Messages", "#", class: "nav-link" %>
+17:            </li>
+18:            <li class="nav-item dropdown">
+19:     <%=   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+20:              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+21:    
+22:                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+23:              </div>
+24:            </li>
+25:          <% else %>
+26:            <li class="nav-item">
+27:              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+28:            </li>
+29:          <% end %>
+30:        </ul>
+31:      </div>
+32:    </div>
+  
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2020-12-22 17:57:22 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 1162)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 12295)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+ <%=   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+):
+1:    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+2:    
+3:    
+4:      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:        <span class="navbar-toggler-icon"></span>
+6:      </button>
+7:    
+8:    
+9:      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+10:        <ul class="navbar-nav mr-auto">
+11:          <% if user_signed_in? %>
+12:            <li class="nav-item active">
+13:              <%= link_to "Home", "#", class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item">
+16:              <%= link_to "Messages", "#", class: "nav-link" %>
+17:            </li>
+18:            <li class="nav-item dropdown">
+19:     <%=   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+20:              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+21:    
+22:                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+23:              </div>
+24:            </li>
+25:          <% else %>
+26:            <li class="nav-item">
+27:              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+28:            </li>
+29:          <% end %>
+30:        </ul>
+31:      </div>
+32:    </div>
+  
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected ',', expecting ')'
+app/views/shared/_navbar.html.erb:19: Can't assign to true
+app/views/shared/_navbar.html.erb:19: syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2020-12-22 17:57:37 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 4.9ms | Allocations: 5195)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 17620)
+
+
+  
+ActionView::Template::Error (The asset "#" is not present in the asset pipeline.
+):
+    16:           <%= link_to "Messages", "#", class: "nav-link" %>
+    17:         </li>
+    18:         <li class="nav-item dropdown">
+    19:  <%=  image_tag "#", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    20:           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+    21: 
+    22:             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+  
+app/views/shared/_navbar.html.erb:19
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2020-12-22 17:57:48 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 1379)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 14224)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:57:57 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 1338)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 14170)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:58:52 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 1398)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 14251)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-12-22 17:58:53 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YF+Wbh5AuXBt8ok5oA1b6ap7FADH5PYjlljP+9++cC1gPGAtqZR8I925kbr6cECmMLxP7NDOP+KkMmpwxheTMQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.2ms | Allocations: 4851)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:58:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 11368)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-22 17:58:55 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 8773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 23)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 21304)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-22 17:59:08 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 520)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 8741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 310)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 182)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 22293)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-22 17:59:08 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 8001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 19462)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-12-22 17:59:17 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EZJQ/kd5q9MYm1vRPq2QTjkneRHpgzwAzgD1yZzo65hluyMv9cuhehNpKc+rfoVv3W9eMBuEt61KABzNJGYn/w==", "user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", "2020-12-22 17:59:17.329719"], ["updated_at", "2020-12-22 17:59:17.329920"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 224ms (ActiveRecord: 2.0ms | Allocations: 8440)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:59:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 1041)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 13064)
+
+
+Started GET "/" for ::1 at 2020-12-22 17:59:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 1037)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 12305)
+
+
+Started GET "/" for ::1 at 2020-12-22 18:00:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1257)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 14126)
+
+
+Started GET "/" for ::1 at 2020-12-22 18:00:17 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:11
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 1042)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 12299)
+
+
