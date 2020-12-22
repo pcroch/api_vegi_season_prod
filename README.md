@@ -6,11 +6,11 @@ Actually no one can modify the db as I locked the modification via an Admin... I
 __For a normal user:__
 
 
-1- Print all the items in the API
+1- Print all the items in the API - **all users**
 
   https://api-season-prod.herokuapp.com/api/v1/products
 
-2- Show the item as per its id
+2- Show the item as per its id - **all users**
 
   :id is an integer
 
