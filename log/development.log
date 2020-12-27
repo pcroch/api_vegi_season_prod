@@ -12468,3 +12468,34 @@ Processing by Api::V2::SelnamesController#show as JSON
 Completed 200 OK in 33ms (Views: 25.0ms | ActiveRecord: 5.6ms | Allocations: 6837)
 
 
+Started GET "/api/v2/selnames/Lemon" for ::1 at 2020-12-27 19:52:06 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V2::SelnamesController#show as JSON
+  Parameters: {"id"=>"Lemon"}
+  Rendering api/v2/selnames/show.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."name" = $1[0m  [["name", "Lemon"]]
+  ↳ app/views/api/v2/selnames/show.json.jbuilder:2
+  Rendered api/v2/selnames/show.json.jbuilder (Duration: 29.1ms | Allocations: 6812)
+Completed 200 OK in 50ms (Views: 28.4ms | ActiveRecord: 5.9ms | Allocations: 10234)
+
+
+Started GET "/" for ::1 at 2020-12-27 19:55:08 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 384)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 204)
+Completed 200 OK in 117ms (Views: 115.3ms | ActiveRecord: 0.0ms | Allocations: 40935)
+
+
+Started GET "/" for ::1 at 2020-12-27 19:57:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 350)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 195)
+Completed 200 OK in 746ms (Views: 744.5ms | ActiveRecord: 0.0ms | Allocations: 11441)
+
+
