@@ -18,17 +18,27 @@ __For a normal user:__
 
   Old: https://api-season-prod.herokuapp.com/api/v1/products/:id 
   
+  Current version: N/A
+  
+ 
+ 3- Show the item as per its product name - **all users**
+
+  :id is an string
+
+
   Current version: https://api-season-prod.herokuapp.com/api/v2/products/:id
   
- 3- Create an item - **admin only**
+  Example: https://api-season-prod.herokuapp.com/api/v2/products/Apple
+  
+ 4- Create an item - **admin only**
  
   **Upcoming** 
  
- 4 - Update an item - **admin only**
+ 5 - Update an item - **admin only**
   
   **Upcoming** 
   
- 5- Destroy an item - **admin only**
+ 6- Destroy an item - **admin only**
  
   **Upcoming** 
  
@@ -45,10 +55,7 @@ __For a normal user:__
   __Upcoming functionalities:__
   
   
-  **1** - Issues: Show item per months instead done
-  
-   **1.b** - Issues: Show item per product instead of per :id 
-     
+   
   **2** - Issues: Write down the doc for the admin
     - Solution: I just have to do it :)
   
