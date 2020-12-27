@@ -38,7 +38,7 @@ class Api::V2::ProductsController < Api::V2::BaseController
   private
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.where(name: params[:id])
     authorize @product  # For Pundit
   end
 
