@@ -11,6 +11,7 @@ class Api::V2::ProductsController < Api::V2::BaseController
   end
 
   def update
+    # if @product.where(name: params[:id]).update_all(product_params)
     if @product.update(product_params)
       render :show
     else
@@ -38,12 +39,13 @@ class Api::V2::ProductsController < Api::V2::BaseController
   private
 
   def set_product
-    @product = Product.where(name: params[:id])
+    # @product = Product.where(name: params[:id])
+    @product = Product.find(params[:id])
     authorize @product  # For Pundit
   end
 
   def product_params
-    params.require(:product).permit(:name, :kind)
+    params.require(:product).permit(:name, :kind, :months_available, :seasons_available)
   end
 
   def render_error
