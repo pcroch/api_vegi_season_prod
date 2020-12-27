@@ -10,7 +10,7 @@ __For a normal user:__
 
   Old: https://api-season-prod.herokuapp.com/api/v1/products 
   
-  Current version: https://api-season-prod.herokuapp.com/api/v2/products
+  Current version: get https://api-season-prod.herokuapp.com/api/v2/products
 
 2- Show the item as per its id - **all users**
 
