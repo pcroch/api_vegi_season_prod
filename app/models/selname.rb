@@ -1,0 +1,2 @@
+class Selname < ApplicationRecord
+end
