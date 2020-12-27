@@ -1,0 +1,2 @@
+class Selkind < ApplicationRecord
+end

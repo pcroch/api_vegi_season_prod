@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       resources :products, only: [:index, :show, :update, :create, :destroy]
       resources :months, only: [:show]
       resources :selnames, only: [:show]
+      resources :selkinds, only: [:show]
     end
   end
 

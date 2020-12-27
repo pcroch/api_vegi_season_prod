@@ -1,4 +1,4 @@
-json.extract! @product, :name, :kind
+json.extract! @product,:id, :name, :kind, :months_available, :seasons_available
 
 
 # json.array! @product do |p|
